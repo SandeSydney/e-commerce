@@ -1,12 +1,40 @@
 import React from 'react'
-import { createBrowserRouter } from 'react-router-dom'
-import App from '../App'
+import { createBrowserRouter, Route, Routes } from 'react-router-dom'
+import About from '../Components/About'
+import Contact from '../Components/Contact'
+import ErrorPage from '../Components/ErrorPage'
+import Home from '../Components/Home'
 import Login from '../Components/Login'
+import Products from '../Components/Products'
+import ShoppingCart from '../Components/ShoppingCart'
 
 const router = createBrowserRouter([
     {
-        path: "/",
-        element: <App />
+        path: '/',
+        element: <Login />,
+        errorElement: <ErrorPage />
+    },
+    {
+        path: '/homepage',
+        element: <Home />,
+        children: [
+            {
+                path: 'products',
+                element: <Products />
+            },
+            {
+                path: 'about',
+                element: <About />
+            },
+            {
+                path: 'contact',
+                element: <Contact />
+            },
+            {
+                path: 'shopping-cart',
+                element: <ShoppingCart />
+            }
+        ]
     }
 ])
 

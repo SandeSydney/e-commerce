@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react'
+import '../App.css'
 
 function Login() {
   const [uname, setUname] = useState('')

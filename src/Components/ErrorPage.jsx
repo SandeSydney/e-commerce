@@ -6,7 +6,7 @@ function ErrorPage() {
     console.error(error)
     return (
         <div className='container'>
-            <h1>Ooops!</h1>
+            <h1>Oooh No!</h1>
             <p>Sorry, error has occured.</p>
             <p>
                 <i>{error.statusText || error.message}</i>

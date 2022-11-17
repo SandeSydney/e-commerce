@@ -15,16 +15,37 @@ button {
 
 nav {
   min-width: 90%;
-  min-height: 10vh;
+  min-height: 8vh;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 20px 30px;
   border-bottom: 1px solid gray;
+  gap: 15px
 }
 
-.schLogout{
+.navLinks {
+  min-width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+
+.linkItems, .links{
+  text-decoration: none;
+  color: #000000;
+}
+
+.links:hover{
+  color: #ef4b4f;
+  text-decoration-line: underline;
+  text-underline-offset: 10px;
+}
+
+.schLogout {
   min-width: 20%;
   display: flex;
   justify-content: space-between;

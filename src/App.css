@@ -1,19 +1,38 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-body{
+body {
   font-size: 16px;
 }
 
-button{
+button {
   padding: 5px 8px;
   border-radius: 8px;
   min-width: 80px;
 }
 
-.loginNav{
+nav {
+  min-width: 90%;
+  min-height: 10vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 30px;
+  border-bottom: 1px solid gray;
+}
+
+.schLogout{
+  min-width: 20%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.loginNav {
   min-height: 10vh;
   display: flex;
   flex-wrap: wrap;
@@ -22,7 +41,7 @@ button{
   padding: 1%;
 }
 
-.container{
+.container {
   min-height: 70vh;
   min-width: 90vw;
   display: flex;
@@ -32,7 +51,7 @@ button{
   gap: 20px;
 }
 
-.loginDiv{
+.loginDiv {
   border: 1px solid green;
   min-width: 50%;
   min-height: 40vh;
@@ -43,7 +62,7 @@ button{
   padding: 20px;
 }
 
-form{
+form {
   border: 1px solid tomato;
   padding: 30px 15px;
   display: flex;
@@ -54,11 +73,13 @@ form{
   min-width: 80%;
 }
 
-form input{
+input {
   padding: 6px;
+  border-radius: 6px;
+  border-style: solid;
 }
 
-.form-element{
+.form-element {
   min-width: 60%;
   display: flex;
   flex-wrap: wrap;

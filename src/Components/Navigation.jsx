@@ -13,12 +13,10 @@ function Navigation() {
                 <Link className='links' to={"/homepage/products"}>Products</Link>
                 <Link className='links' to={"/homepage/about"}>About</Link>
                 <Link className='links' to={"/homepage/contact"}>Contact</Link>
-                <Link className='links' to={"/homepage/cart"}>Shopping Cart</Link>
+                <Link className='links' to={"/homepage/shopping-cart"}>Shopping Cart</Link>
             </div>
-            <div className='schLogout'>
-                <div className="search">
-                    <input type="text" name='searchBar' placeholder='Search' />
-                </div>
+            <div className='Logout'>
+                <p>Logged in as: User</p>
                 <div className="logout">
                     <Link to={"/logout"}>Logout</Link>
                 </div>

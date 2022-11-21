@@ -1,29 +1,33 @@
 import React, { useEffect, useRef, useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { redirect } from 'react-router-dom'
 import '../App.css'
+import { addUser, loginUser } from '../Features/usersSlice'
 
 function Login() {
   const [uname, setUname] = useState('')
   const [pass, setPass] = useState('')
-  const [logStat, setLogStat] = useState('')
 
   const unameRef = useRef(null)
   const passRef = useRef(null)
 
-  const handleChange = ()=>{
+  const dispatch = useDispatch()
+
+  const handleChange = () => {
     setUname(unameRef.current.value)
     setPass(passRef.current.value)
   }
 
   const handleLogin = (e) => {
     e.preventDefault()
-    console.log(uname, pass);
-    if(uname.trim() !== '' && pass.trim() !== ''){
-
+    if (uname.trim() !== '' && pass.trim() !== '') {
+      dispatch(addUser({ name: uname, pass: pass }))
+      dispatch(loginUser())
     }
     clearInput()
   }
 
-  const clearInput = ()=>{
+  const clearInput = () => {
     unameRef.current.value = ''
     passRef.current.value = ''
   }
@@ -42,11 +46,11 @@ function Login() {
             </div>
             <div className="form-element">
               <label htmlFor="userName">Username:</label>
-              <input type="text" name='userName' ref={unameRef} onChange={handleChange}/>
+              <input type="text" name='userName' ref={unameRef} onChange={handleChange} />
             </div>
             <div className="form-element">
               <label htmlFor="password">Password:</label>
-              <input type="text" name='password' ref={passRef} onChange={handleChange}/>
+              <input type="text" name='password' ref={passRef} onChange={handleChange} />
             </div>
             <div className="formBtns">
               <button onClick={handleLogin}>Login</button>

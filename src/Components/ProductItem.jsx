@@ -2,7 +2,7 @@ import React from 'react'
 
 function ProductItem({ product }) {
   return (
-    <div>
+    <div className='productItem'>
       <img src={product.img_url} alt="product image" />
       {product.name}
       {product.desc}

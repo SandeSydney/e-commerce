@@ -16,7 +16,7 @@ function Navigation({ user }) {
     return (
         <nav>
             <h1>
-                <Link className='linkItems' to={'/homepage'}>
+                <Link className='linkItems' to={'/homepage/products'}>
                     SanMart Shopping
                 </Link>
             </h1>
@@ -29,7 +29,7 @@ function Navigation({ user }) {
             <div className='Logout'>
                 <p>Logged in as: {navUser}</p>
                 <div className="logout">
-                    <Link to={'/'} onClick={() => logUserOut}>Logout</Link>
+                    <Link className='links' to={'/'} onClick={() => logUserOut}>Logout</Link>
                 </div>
             </div>
         </nav>

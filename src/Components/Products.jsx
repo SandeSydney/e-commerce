@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import { useSelector } from 'react-redux'
+import { Outlet } from 'react-router-dom'
 import ProductItem from './ProductItem'
 import SideNavigation from './SideNavigation'
 
@@ -15,7 +16,10 @@ const Products = () => {
       <div className="sideNav">
         <SideNavigation />
       </div>
-      <div className='productsDisplay'>{renderedProducts}</div>
+      <div className='productsDisplay'>
+        {/* <Outlet /> */}
+        {renderedProducts}
+      </div>
     </div>
   )
 }

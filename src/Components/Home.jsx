@@ -1,13 +1,14 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 import { Outlet } from 'react-router-dom'
-import RoutesComp from '../Routes/RoutesComp'
 import Navigation from './Navigation'
 
 function Home() {
+    const user = useSelector((state)=>state.users.value)
     return (
         <>
-            <Navigation />
-            <div className="container">
+            <Navigation user={user} />
+            <div className="">
                 <Outlet/>
             </div>
         </>

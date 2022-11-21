@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
+import { dataFile } from './dataFile'
 
 // let data
 // const getFakeData = async () => {
@@ -9,36 +10,7 @@ import axios from 'axios'
 // console.log(getFakeData())
 
 const initialState = {
-    value: [
-        {
-            name:'Chair',
-            desc: 'massive brown chair',
-            price: '30',
-            img_url: 'http://www.chair.com/chair.jpg',
-            discount_rate: '2'
-        },
-        {
-            name:'Chair',
-            desc: 'massive brown chair',
-            price: '30',
-            img_url: 'http://www.chair.com/chair.jpg',
-            discount_rate: '2'
-        },
-        {
-            name:'Chair',
-            desc: 'massive brown chair',
-            price: '30',
-            img_url: 'http://www.chair.com/chair.jpg',
-            discount_rate: '2'
-        },
-        {
-            name:'Chair',
-            desc: 'massive brown chair',
-            price: '30',
-            img_url: 'http://www.chair.com/chair.jpg',
-            discount_rate: '2'
-        }
-    ]
+    value: dataFile
 }
 
 export const productsSlice = createSlice({

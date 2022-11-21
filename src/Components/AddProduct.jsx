@@ -2,8 +2,9 @@ import React from 'react'
 
 function AddProduct() {
   return (
-    <div>
-        <form action="">
+    <div className='container'>
+        <form>
+            <h2>Add Product</h2>
             <div className="form-element">
                 <label htmlFor="itemName">Name:</label>
                 <input type="text" name='itemName' />
@@ -23,6 +24,10 @@ function AddProduct() {
             <div className="form-element">
                 <label htmlFor="itemDiscount">Discount:</label>
                 <input type="text" name='itemDiscount' />
+            </div>
+            <div className="formBtns">
+                <button type="reset">Reset</button>
+                <button type="submit">Submit</button>
             </div>
         </form>
     </div>

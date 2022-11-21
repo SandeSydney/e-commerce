@@ -34,12 +34,13 @@ nav {
   gap: 10px;
 }
 
-.linkItems, .links{
+.linkItems,
+.links {
   text-decoration: none;
   color: #000000;
 }
 
-.links:hover{
+.links:hover {
   color: #ef4b4f;
   text-decoration-line: underline;
   text-underline-offset: 10px;
@@ -73,7 +74,6 @@ nav {
 }
 
 .loginDiv {
-  border: 1px solid green;
   min-width: 50%;
   min-height: 40vh;
   display: flex;
@@ -84,7 +84,7 @@ nav {
 }
 
 form {
-  border: 1px solid tomato;
+  border: 1px solid grey;
   padding: 30px 15px;
   display: flex;
   flex-direction: column;
@@ -106,4 +106,17 @@ input {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 70vh;
+}
+
+.sideNav {
+  flex: 1;
+}
+.productsDisplay{
+  flex: 4;
 }

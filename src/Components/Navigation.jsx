@@ -1,7 +1,18 @@
 import React from 'react'
+import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
+import { logoutUser, removeUser } from '../Features/usersSlice';
 
-function Navigation() {
+function Navigation({ user }) {
+    let navUser
+    user.forEach(element => {
+        navUser = element.name
+    });
+    const dispatch = useDispatch()
+    const logUserOut = () => {
+        dispatch(logoutUser())
+        dispatch(removeUser())
+    }
     return (
         <nav>
             <h1>
@@ -16,9 +27,9 @@ function Navigation() {
                 <Link className='links' to={"/homepage/shopping-cart"}>Shopping Cart</Link>
             </div>
             <div className='Logout'>
-                <p>Logged in as: User</p>
+                <p>Logged in as: {navUser}</p>
                 <div className="logout">
-                    <Link to={"/logout"}>Logout</Link>
+                    <Link to={'/'} onClick={() => logUserOut}>Logout</Link>
                 </div>
             </div>
         </nav>

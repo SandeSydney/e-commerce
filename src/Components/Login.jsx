@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { redirect } from 'react-router-dom'
+import React, { useRef, useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { Link } from 'react-router-dom'
 import '../App.css'
 import { addUser, loginUser } from '../Features/usersSlice'
 
-function Login() {
+export default function Login() {
   const [uname, setUname] = useState('')
   const [pass, setPass] = useState('')
 
@@ -53,7 +53,9 @@ function Login() {
               <input type="text" name='password' ref={passRef} onChange={handleChange} />
             </div>
             <div className="formBtns">
-              <button onClick={handleLogin}>Login</button>
+              <button onClick={handleLogin}>
+                <Link className='linkItems' to={'/homepage'}>Login</Link>
+              </button>
             </div>
           </form>
         </div>
@@ -61,5 +63,3 @@ function Login() {
     </div>
   )
 }
-
-export default Login

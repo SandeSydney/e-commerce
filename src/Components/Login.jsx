@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { Link, redirect } from 'react-router-dom'
 import '../App.css'
 import { addUser, loginUser } from '../Features/usersSlice'
 
@@ -23,6 +23,7 @@ export default function Login() {
     if (uname.trim() !== '' && pass.trim() !== '') {
       dispatch(addUser({ name: uname, pass: pass }))
       dispatch(loginUser())
+      redirect("/homepage/products")
     }
     clearInput()
   }
@@ -42,7 +43,7 @@ export default function Login() {
         <div className='loginDiv'>
           <form>
             <div>
-              <h2>Login</h2>
+              <h2><u>Login</u></h2>
             </div>
             <div className="form-element">
               <label htmlFor="userName">Username:</label>
@@ -54,7 +55,7 @@ export default function Login() {
             </div>
             <div className="formBtns">
               <button onClick={handleLogin}>
-                <Link className='linkItems' to={'/homepage'}>Login</Link>
+                <Link className='logLink' to={'/homepage/products'}>Login</Link>
               </button>
             </div>
           </form>

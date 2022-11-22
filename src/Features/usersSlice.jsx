@@ -19,7 +19,9 @@ export const usersSlice = createSlice({
             state.logged = false
         },
         removeUser: (state, action) => {
-            return state.value.filter((item, i) => i !== action.payload.index)
+            let removeUsr = state.value.filter((item, i) => i === action.payload.index)
+            state.value.splice(state.value.indexOf(removeUsr), 1)
+            state.logged = false
         }
     }
 })

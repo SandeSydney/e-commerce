@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { dataFile } from './dataFile'
 
@@ -10,7 +10,8 @@ import { dataFile } from './dataFile'
 // console.log(getFakeData())
 
 const initialState = {
-    value: dataFile
+    value: dataFile,
+    loading: 'idle'
 }
 
 export const productsSlice = createSlice({

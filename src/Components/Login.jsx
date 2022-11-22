@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { Link, redirect } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../App.css'
 import { addUser, loginUser } from '../Features/usersSlice'
 
@@ -13,6 +13,8 @@ export default function Login() {
 
   const dispatch = useDispatch()
 
+  const navigate = useNavigate()
+
   const handleChange = () => {
     setUname(unameRef.current.value)
     setPass(passRef.current.value)
@@ -23,7 +25,7 @@ export default function Login() {
     if (uname.trim() !== '' && pass.trim() !== '') {
       dispatch(addUser({ name: uname, pass: pass }))
       dispatch(loginUser())
-      redirect("/homepage/products")
+      navigate('homepage/products')
     }
     clearInput()
   }

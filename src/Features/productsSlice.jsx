@@ -10,7 +10,7 @@ const initialState = {
     error: null
 }
 
-const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
+export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
     try {
         const response = await axios.get(PRODUCTS_URL)
         return response.data
@@ -51,5 +51,7 @@ export const productsSlice = createSlice({
 })
 
 export const selectAllProducts = (state) => state.products.value
+export const getproductsStatus = (state) => state.products.status
+export const getProductsError = (state) => state.products.error
 export const { addProduct, deleteProduct } = productsSlice.actions
 export default productsSlice.reducer

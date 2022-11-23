@@ -76,7 +76,8 @@ nav {
   color: #ffffff;
 }
 
-.container {
+.container,
+.loadingDiv {
   min-height: 60vh;
   min-width: 60vw;
   display: flex;
@@ -84,6 +85,10 @@ nav {
   align-items: center;
   gap: 20px;
   padding: 15px 25px;
+}
+
+.loadingDiv{
+  justify-content: center;
 }
 
 .loginDiv {
@@ -164,11 +169,11 @@ input {
   box-shadow: 0 4px 8px 0 rgba(0, 118, 177, 0.2), 0 6px 20px 0 rgba(0, 118, 177, 0.19);
 }
 
-.addProduct{
+.addProduct {
   min-width: 40vw;
 }
 
-.formBtns{
+.formBtns {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;

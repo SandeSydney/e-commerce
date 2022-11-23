@@ -41,7 +41,7 @@ export const productsSlice = createSlice({
                     return product
                 })
 
-                state.products.value = state.products.value.concat(loadedProducts)
+                state.value = state.value.concat(loadedProducts)
             })
             .addCase(fetchProducts.rejected, (state, action)=>{
                 state.status = 'failed'

@@ -26,7 +26,7 @@ nav {
   gap: 15px;
   position: sticky;
   top: 0;
-  background-color: #006699;
+  background-color: #336699;
 }
 
 .navLinks {
@@ -72,12 +72,14 @@ nav {
   justify-content: center;
   align-items: center;
   padding: 1%;
-  background-color: rgb(0, 102, 153);
+  background-color: #336699;
+  opacity: .8;
   color: #ffffff;
 }
 
 .container,
-.loadingDiv {
+.loadingDiv,
+.containerLogin {
   min-height: 60vh;
   min-width: 60vw;
   display: flex;
@@ -87,15 +89,21 @@ nav {
   padding: 15px 25px;
 }
 
-.loadingDiv{
+.containerLogin{
+  background-image: url('./Assets/landing.jpg');
+  background-size: cover;
+}
+
+.loadingDiv {
   justify-content: center;
 }
-.loadingDiv img{
+
+.loadingDiv img {
   max-width: 30%;
 }
 
 .loginDiv {
-  min-width: 50%;
+  min-width: 90%;
   min-height: 60vh;
   display: flex;
   flex-direction: column;
@@ -105,7 +113,10 @@ nav {
 }
 
 form {
-  border: 1px solid grey;
+  border: 1px solid #86bbd8;
+  background-color: #daf7dc;
+  box-shadow: 0 8px 16px 0 rgba(0, 118, 177, 0.2),
+    0 6px 20px 0 rgba(0, 118, 177, 0.19);
   border-radius: 12px;
   min-height: 40vh;
   padding: 30px 15px;
@@ -114,7 +125,7 @@ form {
   gap: 15px;
   justify-content: space-evenly;
   align-items: center;
-  min-width: 80%;
+  min-width: 50%;
 }
 
 input {
@@ -129,6 +140,7 @@ input {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  gap: 10px;
 }
 
 .products {
@@ -159,17 +171,24 @@ input {
 }
 
 .productItem {
-  border: 1px solid grey;
+  border: 1px solid rgb(207, 237, 247);
   border-radius: 12px;
   padding: 10px;
   margin: 10px;
   display: flex;
   flex-direction: column;
-  min-height: 25vh;
+  gap: 5px;
+  min-height: 22vh;
+}
+
+.productItem img {
+  width: 150px;
+  height: 150px;
 }
 
 .productItem:hover {
-  box-shadow: 0 4px 8px 0 rgba(0, 118, 177, 0.2), 0 6px 20px 0 rgba(0, 118, 177, 0.19);
+  box-shadow: 0 8px 16px 0 rgba(0, 118, 177, 0.2),
+    0 6px 20px 0 rgba(0, 118, 177, 0.19);
 }
 
 .addProduct {
@@ -180,4 +199,17 @@ input {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
+}
+
+.scrollBtn {
+  border: 1px solid #96565c;
+  position: fixed;
+  padding: 8px 6px;
+  font-size: 18px;
+  bottom: 40px;
+  left: 40px;
+  background-color: #96565c;
+  color: #ffffff;
+  text-align: center;
+  cursor: pointer;
 }

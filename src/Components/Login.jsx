@@ -36,7 +36,7 @@ export default function Login() {
   }
 
   return (
-    <div className="container">
+    <div className="containerLogin">
       <div className='loginNav'>
         <h1>SanMart Shopping</h1>
       </div>

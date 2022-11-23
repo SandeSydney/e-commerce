@@ -90,6 +90,9 @@ nav {
 .loadingDiv{
   justify-content: center;
 }
+.loadingDiv img{
+  max-width: 30%;
+}
 
 .loginDiv {
   min-width: 50%;

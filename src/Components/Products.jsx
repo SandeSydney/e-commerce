@@ -1,16 +1,35 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
-import { Outlet } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { selectAllProducts, getProductsError, getproductsStatus, fetchProducts } from '../Features/productsSlice'
 import ProductItem from './ProductItem'
 import SideNavigation from './SideNavigation'
 
 
 const Products = () => {
-  const products = useSelector((state) => state.products.value)
+  const dispatch = useDispatch()
 
-  const renderedProducts = products.map((product, id) => {
-    return <ProductItem key={id} product={product} />
-  })
+  const products = useSelector(selectAllProducts)
+  const status = useSelector(getproductsStatus)
+  const error = useSelector(getProductsError)
+
+  useEffect(() => {
+    if (status === 'idle') {
+      dispatch(fetchProducts())
+    }
+  }, [status, dispatch])
+
+  let content
+  if (status === 'loading') {
+    // content = <img src="loadGif" alt="Loading" />
+    content = <div className='loadingDiv'><p>Loading...</p></div>
+  } else if (status === 'succeeded') {
+    content = products.map((product, id) => {
+      return <ProductItem key={id} product={product} />
+    })
+  } else if (status === 'failed') {
+    content = <p>{error}</p>
+  }
+
   return (
     <div className='products'>
       <div className="sideNav">
@@ -18,7 +37,7 @@ const Products = () => {
       </div>
       <div className='productsDisplay'>
         {/* <Outlet /> */}
-        {renderedProducts}
+        {content}
       </div>
     </div>
   )

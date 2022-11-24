@@ -29,7 +29,6 @@ const Products = () => {
     content = products.map((product, id) => {
       return <ProductItem key={id} product={product} />
     })
-    console.log(content);
   } else if (status === 'failed') {
     content = <p>{error}</p>
   }

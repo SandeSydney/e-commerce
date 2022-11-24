@@ -11,8 +11,8 @@ function AddProduct() {
 
     return (
         <div className="container">
-            <div className='addProduct'>
-                <form className='addProdForm'>
+            <div className='frmDiv'>
+                <form>
                     <h2><u>Add Product</u></h2>
                     <div className="form-element">
                         <label htmlFor="itemName">Name:</label>
@@ -36,7 +36,7 @@ function AddProduct() {
                     </div>
                     <div className="formBtns">
                         <button type="reset" onClick={()=>{dispatch(showAddForm(false))}}>Cancel</button>
-                        <button type="submit" onClick={()=>{handleOnSubmit()}}>Submit</button>
+                        <button className='submitBtn' type="submit" onClick={()=>{handleOnSubmit()}}>Submit</button>
                     </div>
                 </form>
             </div>

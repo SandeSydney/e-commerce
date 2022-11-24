@@ -1,9 +1,10 @@
 import React, { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { selectAllProducts, getProductsError, getproductsStatus, fetchProducts } from '../Features/productsSlice'
+import { selectAllProducts, getProductsError, getproductsStatus, fetchProducts, getShowAddForm } from '../Features/productsSlice'
 import ProductItem from './ProductItem'
 import SideNavigation from './SideNavigation'
 import load from '../Assets/loading.gif'
+import AddProduct from './AddProduct'
 
 
 const Products = () => {
@@ -12,6 +13,7 @@ const Products = () => {
   const products = useSelector(selectAllProducts)
   const status = useSelector(getproductsStatus)
   const error = useSelector(getProductsError)
+  const showAddFrm = useSelector(getShowAddForm)
 
   useEffect(() => {
     if (status === 'idle') {
@@ -27,6 +29,7 @@ const Products = () => {
     content = products.map((product, id) => {
       return <ProductItem key={id} product={product} />
     })
+    console.log(content);
   } else if (status === 'failed') {
     content = <p>{error}</p>
   }
@@ -36,9 +39,8 @@ const Products = () => {
       <div className="sideNav">
         <SideNavigation />
       </div>
-      <div className='productsDisplay'>
-        {/* <Outlet /> */}
-        {content}
+      <div className='productsDisplay'>        
+        {showAddFrm ? <AddProduct /> : content}
       </div>
     </div>
   )

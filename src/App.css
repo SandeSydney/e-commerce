@@ -5,6 +5,7 @@
 
 body {
   font-size: 16px;
+  background-color: #e4f5e5;
 }
 
 button {
@@ -172,6 +173,7 @@ input {
 
 .productItem {
   border: 1px solid rgb(207, 237, 247);
+  background-color: #c1d7e2;
   border-radius: 12px;
   padding: 10px;
   margin: 10px;
@@ -183,12 +185,15 @@ input {
 
 .productItem img {
   width: 150px;
-  height: 150px;
+  height: 130px;
+  border-radius: 10px;
+  align-self: center;
 }
 
 .productItem:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 118, 177, 0.2),
     0 6px 20px 0 rgba(0, 118, 177, 0.19);
+  border: 1px solid #ecb7bd;
 }
 
 .addProduct {
@@ -214,3 +219,9 @@ input {
   text-align: center;
   cursor: pointer;
 }
+
+
+
+/* ***********************************************************
+* Media Queries
+************************************************************** */

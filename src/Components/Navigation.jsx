@@ -24,7 +24,9 @@ function Navigation({ user }) {
                 <Link className='links' to={"/homepage/products"}>Products</Link>
                 <Link className='links' to={"/homepage/about"}>About</Link>
                 <Link className='links' to={"/homepage/contact"}>Contact</Link>
-                <Link className='links' to={"/homepage/shopping-cart"}>Shopping Cart</Link>
+                <Link className='links cartLink' to={"/homepage/shopping-cart"}>
+                    Shopping Cart
+                </Link>
             </div>
             <div className='Logout'>
                 <p>Logged in as: {navUser}</p>

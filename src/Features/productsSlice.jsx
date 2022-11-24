@@ -1,6 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
-import { dataFile } from './dataFile'
 
 const ORG_PRODUCTS_URL = 'https://fakestoreapi.com/products'
 

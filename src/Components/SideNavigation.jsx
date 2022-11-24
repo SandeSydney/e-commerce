@@ -9,11 +9,12 @@ function SideNavigation() {
 
   return (
     <div className='sideNav'>
-      {showAdd ? '' : <button>
-        <Link className='sideNavLinks' to={'add-product'} onClick={() => dispatch(showAddForm(true))}>
+      {showAdd ?
+        '' :
+        <button className='sideNavLinks' onClick={() => dispatch(showAddForm(true))}>
           Add Product
-        </Link>
-      </button>}
+        </button>
+      }
     </div>
   )
 }

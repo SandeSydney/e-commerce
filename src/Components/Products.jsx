@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { selectAllProducts, getProductsError, getproductsStatus, fetchProducts } from '../Features/productsSlice'
 import ProductItem from './ProductItem'
 import SideNavigation from './SideNavigation'
+import load from '../Assets/loading.gif'
 
 
 const Products = () => {
@@ -21,7 +22,7 @@ const Products = () => {
   let content
   if (status === 'loading') {
     // content = <img src="loadGif" alt="Loading" />
-    content = <div className='loadingDiv'><p>Loading...</p></div>
+    content = <div className='loadingDiv'><img src={load} alt="Loading..." /></div>
   } else if (status === 'succeeded') {
     content = products.map((product, id) => {
       return <ProductItem key={id} product={product} />

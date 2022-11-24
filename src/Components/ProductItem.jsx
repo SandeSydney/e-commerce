@@ -8,6 +8,7 @@ function ProductItem({ product }) {
       <p>{product.price}</p>
       <p>{product.category}</p>
       <p>{product.discount_rate}</p>
+      <button className='addToCartBtn'>Add to Cart</button>
     </div>
   )
 }

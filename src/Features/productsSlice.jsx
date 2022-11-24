@@ -2,7 +2,9 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 import axios from 'axios'
 import { dataFile } from './dataFile'
 
-const PRODUCTS_URL = 'https://fakestoreapi.com/products'
+const ORG_PRODUCTS_URL = 'https://fakestoreapi.com/products'
+
+const FIRE_PRODUCTS_URL = 'https://e-commerce-64fd7-default-rtdb.firebaseio.com/products.json'
 
 const initialState = {
     value: [],
@@ -12,10 +14,19 @@ const initialState = {
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
     try {
-        const response = await axios.get(PRODUCTS_URL)
+        const response = await axios.get(ORG_PRODUCTS_URL)
         return response.data
     } catch (err) {
         return err.message
+    }
+})
+
+export const addNewProduct = createAsyncThunk('products/addNewProduct', async(initialProduct)=>{
+    try {
+        const response = await axios.post(FIRE_PRODUCTS_URL, initialProduct)
+        return response.data
+    } catch (error) {
+        return error.message
     }
 })
 
@@ -46,6 +57,9 @@ export const productsSlice = createSlice({
             .addCase(fetchProducts.rejected, (state, action)=>{
                 state.status = 'failed'
                 state.error = action.error.message
+            })
+            .addCase(addNewProduct.fulfilled, (state, action)=>{
+                state.value.push(action.payload)
             })
     }
 })

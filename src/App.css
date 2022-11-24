@@ -16,7 +16,7 @@ button {
   font-weight: 500;
 }
 
-.loginBtn{
+.loginBtn {
   background-color: #008000;
   color: #ffffff;
 }
@@ -95,7 +95,7 @@ nav {
   padding: 15px 25px;
 }
 
-.containerLogin{
+.containerLogin {
   background-image: url('./Assets/landing.jpg');
   background-size: cover;
 }

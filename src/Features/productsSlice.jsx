@@ -8,7 +8,8 @@ const FIRE_PRODUCTS_URL = 'https://e-commerce-64fd7-default-rtdb.firebaseio.com/
 const initialState = {
     value: [],
     status: 'idle',
-    error: null
+    error: null,
+    showAdd: false
 }
 
 export const fetchProducts = createAsyncThunk('products/fetchProducts', async () => {
@@ -38,6 +39,9 @@ export const productsSlice = createSlice({
         },
         deleteProduct: (state, action) => {
             return state.value.filter((item, i) => i !== action.payload.index)
+        },
+        showAddForm: (state, action)=>{
+            state.showAdd = action.payload
         }
     },
     extraReducers(builder) {
@@ -66,5 +70,6 @@ export const productsSlice = createSlice({
 export const selectAllProducts = (state) => state.products.value
 export const getproductsStatus = (state) => state.products.status
 export const getProductsError = (state) => state.products.error
-export const { addProduct, deleteProduct } = productsSlice.actions
+export const getShowAddForm = (state)=> state.products.showAdd
+export const { addProduct, deleteProduct, showAddForm } = productsSlice.actions
 export default productsSlice.reducer

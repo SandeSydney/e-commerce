@@ -12,6 +12,13 @@ button {
   padding: 5px 8px;
   border-radius: 8px;
   min-width: 80px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.loginBtn {
+  background-color: #008000;
+  color: #ffffff;
 }
 
 nav {
@@ -67,14 +74,12 @@ nav {
 
 .loginNav {
   min-height: 10vh;
-  min-width: 97vw;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   padding: 1%;
-  background-color: #336699;
-  opacity: .8;
+  background-color: #33669941;
   color: #ffffff;
 }
 
@@ -90,7 +95,7 @@ nav {
   padding: 15px 25px;
 }
 
-.containerLogin{
+.containerLogin {
   background-image: url('./Assets/landing.jpg');
   background-size: cover;
 }
@@ -101,6 +106,7 @@ nav {
 
 .loadingDiv img {
   max-width: 30%;
+  border-style: none;
 }
 
 .loginDiv {
@@ -115,7 +121,7 @@ nav {
 
 form {
   border: 1px solid #86bbd8;
-  background-color: #daf7dc;
+  background-color: #daf7dc80;
   box-shadow: 0 8px 16px 0 rgba(0, 118, 177, 0.2),
     0 6px 20px 0 rgba(0, 118, 177, 0.19);
   border-radius: 12px;
@@ -191,9 +197,9 @@ input {
 }
 
 .productItem:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 118, 177, 0.2),
-    0 6px 20px 0 rgba(0, 118, 177, 0.19);
-  border: 1px solid #ecb7bd;
+  box-shadow: 0 8px 16px 0 rgba(239, 75, 79, 0.3),
+    0 6px 20px 0 rgba(239, 75, 79, 0.19);
+  border: 1px solid rgb(255, 154, 155)
 }
 
 .addProduct {

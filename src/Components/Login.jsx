@@ -56,7 +56,7 @@ export default function Login() {
               <input type="text" name='password' ref={passRef} onChange={handleChange} />
             </div>
             <div className="formBtns">
-              <button onClick={handleLogin}>
+              <button className={"loginBtn"} onClick={handleLogin}>
                 <Link className='logLink' to={'/homepage/products'}>Login</Link>
               </button>
             </div>

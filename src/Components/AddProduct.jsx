@@ -1,6 +1,9 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
+import { showAddForm } from '../Features/productsSlice'
 
 function AddProduct() {
+    const dispatch = useDispatch()
 
     const handleOnSubmit = (e)=>{
         e.preventDefault()
@@ -32,7 +35,7 @@ function AddProduct() {
                         <input type="text" name='itemDiscount' />
                     </div>
                     <div className="formBtns">
-                        <button type="reset">Reset</button>
+                        <button type="reset" onClick={()=>{dispatch(showAddForm(false))}}>Cancel</button>
                         <button type="submit" onClick={()=>{handleOnSubmit()}}>Submit</button>
                     </div>
                 </form>

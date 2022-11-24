@@ -1,11 +1,10 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 
 function ScrollToTop() {
     const scrollBtn = document.getElementById('scrollBtn')
-    // useEffect(()=>{
-    //     scrollFunc()
-    // },[window.onscroll])
+
     window.onscroll = ()=>{scrollFunc()}
+
     const scrollTop = ()=>{
         window.scrollTo({top:0, left:0, behavior:'smooth'})
     }

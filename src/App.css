@@ -125,7 +125,7 @@ form {
   gap: 15px;
   justify-content: space-evenly;
   align-items: center;
-  min-width: 50%;
+  min-width: 60%;
 }
 
 input {
@@ -139,7 +139,7 @@ input {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   gap: 10px;
 }
 
@@ -198,7 +198,8 @@ input {
 .formBtns {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px;
+  align-items: center;
+  gap: 150px;
 }
 
 .scrollBtn {

@@ -2,6 +2,7 @@ import React from 'react'
 import { useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom'
 import { logoutUser, removeUser } from '../Features/usersSlice';
+import cartImg from '../Assets/cart.png'
 
 function Navigation({ user }) {
     let navUser
@@ -24,9 +25,13 @@ function Navigation({ user }) {
                 <Link className='links' to={"/homepage/products"}>Products</Link>
                 <Link className='links' to={"/homepage/about"}>About</Link>
                 <Link className='links' to={"/homepage/contact"}>Contact</Link>
-                <Link className='links cartLink' to={"/homepage/shopping-cart"}>
-                    Shopping Cart
-                </Link>
+                <div className='cartDiv'>
+                    <Link className='links' to={"/homepage/shopping-cart"}>Cart
+                    </Link>
+                    <div className='cartImgDiv'>
+                        <div className='cartQuantity'>5</div>
+                    </div>
+                </div>
             </div>
             <div className='Logout'>
                 <p>Logged in as: {navUser}</p>

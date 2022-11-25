@@ -38,7 +38,7 @@ const Products = () => {
       <div className="sideNav">
         <SideNavigation />
       </div>
-      <div className='productsDisplay'>        
+      <div className='productsDisplay'>
         {showAddFrm ? <AddProduct /> : content}
       </div>
     </div>

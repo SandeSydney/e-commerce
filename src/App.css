@@ -66,6 +66,29 @@ nav {
   gap: 10px;
 }
 
+.cartDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cartImgDiv {
+  background-image: url('./Assets/cart.png');
+  min-width: 40px;
+  height: 40px;
+  background-size: cover;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+}
+
+.cartQuantity{
+  padding: 2px;
+  background-color: white;
+  border-radius: 25%;
+  color: #96565c;
+}
+
 .linkItems,
 .links,
 .logLink {
@@ -267,6 +290,14 @@ textarea {
   color: #ffffff;
   text-align: center;
   cursor: pointer;
+}
+
+.itemCount {
+  min-width: 40px;
+  min-height: 40px;
+  background-image: url('https://icons8.com/icon/9720/shopping-cart');
+  border-radius: 50%;
+  font-size: 18px;
 }
 
 

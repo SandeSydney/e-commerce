@@ -9,16 +9,36 @@ body {
 }
 
 button {
-  padding: 5px 8px;
+  border: 2px solid #cfedf7;
+  padding: 8px;
   border-radius: 8px;
   min-width: 80px;
   font-size: 16px;
   font-weight: 500;
+  text-align: center;
 }
 
 .loginBtn {
   background-color: #008000;
   color: #ffffff;
+}
+
+.addToCartBtn {
+  background-color: #6abea7;
+  cursor: pointer;
+}
+
+.resetBtn {
+  background-color: #f4e910;
+}
+
+.submitBtn {
+  background-color: #4eab3b;
+}
+
+.addToCartBtn:hover {
+  font-size: 17px;
+  color: #ef4b4f;
 }
 
 nav {
@@ -46,6 +66,29 @@ nav {
   gap: 10px;
 }
 
+.cartDiv {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.cartImgDiv {
+  background-image: url('./Assets/cart.png');
+  min-width: 40px;
+  height: 40px;
+  background-size: cover;
+  display: flex;
+  justify-content: right;
+  align-items: flex-start;
+}
+
+.cartQuantity{
+  padding: 2px;
+  background-color: white;
+  border-radius: 25%;
+  color: #96565c;
+}
+
 .linkItems,
 .links,
 .logLink {
@@ -57,8 +100,11 @@ nav {
   color: #000000;
 }
 
-.links:hover,
 .sideNavLinks:hover {
+  color: #ef4b4f;
+}
+
+.links:hover {
   color: #ef4b4f;
   text-decoration-line: underline;
   text-underline-offset: 10px;
@@ -98,6 +144,13 @@ nav {
 .containerLogin {
   background-image: url('./Assets/landing.jpg');
   background-size: cover;
+  min-height: 97vh;
+}
+
+.containerContact {
+  background-image: url('./Assets/contact.jpg');
+  background-size: cover;
+  min-height: 82vh;
 }
 
 .loadingDiv {
@@ -119,7 +172,8 @@ nav {
   padding: 20px;
 }
 
-form {
+form,
+.contactForm {
   border: 1px solid #86bbd8;
   background-color: #daf7dc80;
   box-shadow: 0 8px 16px 0 rgba(0, 118, 177, 0.2),
@@ -132,13 +186,19 @@ form {
   gap: 15px;
   justify-content: space-evenly;
   align-items: center;
-  min-width: 60%;
+  min-width: 80%;
 }
 
-input {
+.contactForm {
+  width: 100%;
+}
+
+input,
+textarea {
   padding: 6px;
   border-radius: 6px;
   border-style: solid;
+  width: 70%;
 }
 
 .form-element {
@@ -167,8 +227,9 @@ input {
 }
 
 .sideNavLinks {
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
+  background-color: #336699;
 }
 
 .productsDisplay {
@@ -178,12 +239,13 @@ input {
 }
 
 .productItem {
-  border: 1px solid rgb(207, 237, 247);
+  border: 1px solid #cfedf7;
   background-color: #c1d7e2;
   border-radius: 12px;
   padding: 10px;
   margin: 10px;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   gap: 5px;
   min-height: 22vh;
@@ -199,11 +261,15 @@ input {
 .productItem:hover {
   box-shadow: 0 8px 16px 0 rgba(239, 75, 79, 0.3),
     0 6px 20px 0 rgba(239, 75, 79, 0.19);
-  border: 1px solid rgb(255, 154, 155)
+  border: 1px solid #ff9a9b;
 }
 
-.addProduct {
-  min-width: 40vw;
+.frmDiv {
+  min-width: 50vw;
+}
+
+.largeFormDiv {
+  min-width: 50vw;
 }
 
 .formBtns {
@@ -224,6 +290,14 @@ input {
   color: #ffffff;
   text-align: center;
   cursor: pointer;
+}
+
+.itemCount {
+  min-width: 40px;
+  min-height: 40px;
+  background-image: url('https://icons8.com/icon/9720/shopping-cart');
+  border-radius: 50%;
+  font-size: 18px;
 }
 
 

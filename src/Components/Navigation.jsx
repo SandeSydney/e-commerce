@@ -25,7 +25,7 @@ function Navigation({ user }) {
                 <Link className='links' to={"/homepage/products"}>Products</Link>
                 <Link className='links' to={"/homepage/about"}>About</Link>
                 <Link className='links' to={"/homepage/contact"}>Contact</Link>
-                <div className='cartDiv'>
+                <div className='cartNavDiv'>
                     <Link className='links' to={"/homepage/shopping-cart"}>Cart
                     </Link>
                     <div className='cartImgDiv'>

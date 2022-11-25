@@ -5,6 +5,7 @@ import ProductItem from './ProductItem'
 import SideNavigation from './SideNavigation'
 import load from '../Assets/loading.gif'
 import AddProduct from './AddProduct'
+import ScrollToTop from './ScrollToTop'
 
 
 const Products = () => {
@@ -40,6 +41,7 @@ const Products = () => {
       </div>
       <div className='productsDisplay'>
         {showAddFrm ? <AddProduct /> : content}
+        <ScrollToTop />
       </div>
     </div>
   )

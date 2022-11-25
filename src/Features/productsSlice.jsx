@@ -16,16 +16,15 @@ export const fetchProducts = createAsyncThunk('products/fetchProducts', async ()
         let productData = []
         for(let key in response.data){
             productData.push({
-                category: response.data[key].category,
-                description: response.data[key].description,
                 id: response.data[key].id,
-                image: response.data[key].image,
+                name: response.data[key].name,
+                description: response.data[key].description,
                 price: response.data[key].price,
-                rating: response.data[key].rating,
-                title: response.data[key].title
+                image_url: response.data[key].image_url,
+                discount_rate: response.data[key].discount_rate
             })
         }
-        console.log(productData);
+        // console.log(productData);
         return productData
     } catch (err) {
         return err.message
